@@ -4,11 +4,11 @@ function redirect_to(params){
         "/" + currentdate.getFullYear() + " @ " +
         currentdate.getHours() + ":" +
         currentdate.getMinutes();
-    var dateAfter = new Date('2018-10-25T18:53:00'); // Altere a data Ano-Mes-Dia-Horario.
+
+    var dateAfter = new Date(`${params.year}-${params.month}-${params.day}T${params.hour}:${params.minute}:00`);
 
     if (currentdate >= dateAfter)
     {
         location.href = `${params.url}`;
     }
-
 }
